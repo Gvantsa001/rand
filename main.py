@@ -21,8 +21,6 @@ while (video.isOpened()):
         video.release()
         if ord('q'):
             break
-        else:
-            break
 
 cv2.destroyAllWindows()
 
@@ -34,8 +32,6 @@ print(rand_s, (rand_x, rand_y), (r, g, b))
 binary = ""
 
 ans = r*g*b
-
-print(ans)
 
 while ans>0:
         r = ans%2
