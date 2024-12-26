@@ -24,13 +24,33 @@ while (video.isOpened()):
         else:
             break
 
+cv2.destroyAllWindows()
 
 
 print(rand_s, (rand_x, rand_y), (r, g, b))
 
 
 
-cv2.destroyAllWindows()
+binary = ""
+
+ans = r*g*b
+
+print(ans)
+
+while ans>0:
+        r = ans%2
+        binary = str(r)+binary
+        ans=ans//2 
+        
+print(binary)
+
+while len(binary)<32:
+    binary = binary + str(random.choice([0, 1]))
+
+print(binary)
+
+
+
 
 
 
